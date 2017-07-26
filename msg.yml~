@@ -1,0 +1,10 @@
+---
+ - hosts: myhosts
+   user: root
+   vars:
+    wel_msg: 'Welcome to Ansible'
+   tasks:
+    - name: sample_msg
+      copy:
+       dest: /home/test/node/testing_ansible
+       content: "{{wel_msg}}"
